@@ -209,7 +209,7 @@ input, select, textarea {
 		letter-spacing: 0.25em;
 		line-height: 1.65;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
+		text-transform: lowercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -3503,7 +3503,7 @@ input, select, textarea {
 		font-size: 0.5em;
 		font-weight: 400;
 		letter-spacing: 0.25em;
-		text-transform: uppercase;
+		text-transform: lowercase;
 	}
 
 	body.single #footer {
@@ -3581,7 +3581,7 @@ input, select, textarea {
 						letter-spacing: 0.25em;
 						margin-bottom: 0;
 						text-decoration: none;
-						text-transform: uppercase;
+						text-transform: lowercase;
 					}
 
 					#menu .links > li a:hover h3 {
