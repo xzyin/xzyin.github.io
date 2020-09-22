@@ -1,8 +1,7 @@
 source "https://rubygems.org"
 
-gem "tzinfo-data"
-gem "jekyll", "~> 3.7"
+gem "jekyll", ">= 3.6.3"
 gem "jekyll-sitemap"
-gem "jekyll-feed"
+gem "octopress"
 gem "jekyll-paginate"
 gem "jekyll-gist"

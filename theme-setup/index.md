@@ -7,7 +7,6 @@ image:
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 share: true
-modified: 2016-06-01T15:14:43-04:00
 ---
 
 General notes and suggestions for customizing **HPSTR**.
@@ -17,13 +16,13 @@ HPSTR now requires [Jekyll](http://jekyllrb.com/) 3.0. Make sure to run `bundle 
 ## Basic Setup for a new Jekyll site
 
 1. [Install Bundler](http://bundler.io) `gem install bundler` and then install [Jekyll](http://jekyllrb.com) and all dependencies `bundle install`.
-2. Fork the [HPSTR Jekyll Theme repo](https://github.com/mmistakes/jekyll-theme-hpstr/fork).
+2. Fork the [HPSTR Jekyll Theme repo](https://github.com/mmistakes/hpstr-jekyll-theme/fork).
 3. Clone the repo you just forked and rename it.
 4. Edit `_config.yml` to personalize your site.
 5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.
 6. Read the documentation below for further customization pointers and documentation.
 
-<div markdown="0"><a href="https://github.com/mmistakes/jekyll-theme-hpstr/archive/master.zip" class="btn">Download the Theme</a></div>
+<div markdown="0"><a href="https://github.com/mmistakes/hpstr-jekyll-theme/archive/master.zip" class="btn">Download the Theme</a></div>
 
 **Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
 {: .notice}
@@ -46,18 +45,18 @@ The preferred method for running Jekyll is with `bundle exec`, but if you're wil
 >
 >However, this is unreliable and is the source of considerable pain. Even if it looks like it works, it may not work in the future or on another machine.
 
-```bash
+{% highlight text %}
 bundle exec jekyll build
 
 bundle exec jekyll serve
-```
+{% endhighlight %}
 
 ---
 
 ## Folder Structure
 
-```bash
-jekyll-theme-hpstr/
+{% highlight bash %}
+hpstr-jekyll-theme/
 ├── _includes
 |    ├── browser-upgrade.html       # prompt to upgrade browser on < IE8
 |    ├── footer.html                # site footer
@@ -83,7 +82,7 @@ jekyll-theme-hpstr/
 ├── posts/                          # all posts
 ├── tags/                           # all posts grouped by tag
 └── index.html                      # home page with pagination
-```
+{% endhighlight %}
 
 ---
 
@@ -95,17 +94,17 @@ Most of the variables found here are used in the .html files found in `_includes
 
 Create a [Disqus](http://disqus.com) account and change `disqus_shortname` in `_config.yml` to the Disqus *shortname* you just setup. By default comments appear on all post and pages if you assigned a shortname. To disable commenting on a post or page, add the following to its YAML Front Matter:
 
-```yaml
+{% highlight yaml %}
 comments: false
-```
+{% endhighlight %}
 
 ### Social Share Links
 
 To disable Facebook, Twitter, and Google+ share links on a post or page, add the following to its front matter:
 
-```yaml
+{% highlight yaml %}
 share: false
-```
+{% endhighlight %}
 
 ### Owner/Author Information
 
@@ -119,21 +118,45 @@ Your Google Analytics ID goes here along with meta tags for [Google Webmaster To
 
 To add additional links in the drop down menu edit `_data/navigation.yml`. Use the following format to set the URL and title for as many links as you'd like. *External links will open in a new window.*
 
-```yaml
+{% highlight yaml %}
 - title: Portfolio
   url: /portfolio/
 
 - title: Made Mistakes
   url: http://mademistakes.com  
-```
+{% endhighlight %}
 
 ---
 
-## Adding New Content
+## Adding New Content with Octopress
 
-Posts are stored in the `_posts` directory and named according to the `YEAR-MONTH-DAY-title.MARKUP` format as per [the usual](https://jekyllrb.com/docs/posts/).
+While completely optional, I've included Octopress and some starter templates to automate the creation of new posts and pages. To take advantage of it start by installing the [Octopress](https://github.com/octopress/octopress) gem if it isn't already.
 
-To streamline the creation of posts and pages, [Jekyll::Compose](https://github.com/jekyll/jekyll-compose) and [Octopress](https://github.com/octopress/octopress) are great plugins you can install to automate this process.
+{% highlight bash %}
+$ gem install octopress
+{% endhighlight %}
+
+### New Post
+
+Default command
+
+{% highlight bash %}
+$ octopress new post "Post Title"
+{% endhighlight %}
+
+Default works great if you want all your posts in one directory, but if you're like me and want to group them into subfolders like `/posts`, `/portfolio`, etc. Then this is the command for you. By specifying the DIR it will create a new post in that folder and populate the `categories:` YAML with the same value.
+
+{% highlight bash %}
+$ octopress new post "New Portfolio Post Title" --dir portfolio
+{% endhighlight %}
+
+### New Page
+
+To create a new page use the following command.
+
+{% highlight bash %}
+$ octopress new page new-page/
+{% endhighlight %}
 
 ---
 
@@ -151,27 +174,27 @@ A good rule of thumb is to keep feature images nice and wide so you don't push t
 
 The two layouts make the assumption that the feature images live in the *images* folder. To add a feature image to a post or page just include the filename in the front matter like so.
 
-```yaml
+{% highlight yaml %}
 image:
   feature: feature-image-filename.jpg
   thumb: thumbnail-image.jpg #keep it square 200x200 px is good
-```
+{% endhighlight %}
 
 If you want to apply attribution to a feature image use the following YAML front matter on posts or pages. Image credits appear directly below the feature image with a link back to the original source.
 
-```yaml
+{% highlight yaml %}
 image:
   feature: feature-image-filename.jpg
   credit: Michael Rose #name of the person or site you want to credit
   creditlink: http://mademistakes.com #url to their site or licensing
-```
+{% endhighlight %}
 
 By default the `<div>` containing feature images is set to have a minimum height of 400px with CSS. Anything taller is hidden with an `overflow: hidden` declaration. You can customize the height of the homepage feature image and those appearing on posts/pages by modifying the following variables in `/_sass/_variables.scss`.
 
-```scss
+{% highlight sass %}
 $feature-image-height: 400px; // min 150px recommended
 $front-page-feature-image-height: 400px; // min 150px recommended
-```
+{% endhighlight %}
 
 #### Post/Page Thumbnails for OG and Twitter Cards
 
@@ -184,6 +207,12 @@ Here's an example of what a tweet to your site could look like if you activate T
 ### Videos
 
 Video embeds are responsive and scale with the width of the main content block with the help of [FitVids](http://fitvidsjs.com/).
+
+Not sure if this only effects Kramdown or if it's an issue with Markdown in general. But adding YouTube video embeds causes errors when building your Jekyll site. To fix add a space between the `<iframe>` tags and remove `allowfullscreen`. Example below:
+
+{% highlight html %}
+<iframe width="560" height="315" src="http://www.youtube.com/embed/PWf4WUoMXwg" frameborder="0"> </iframe>
+{% endhighlight %}
 
 ### Twitter Cards
 
@@ -203,9 +232,9 @@ For example if you wanted a red background instead of white you'd change `$bodyc
 
 To modify the site's JavaScript files I setup a Grunt build script to lint/concatenate/minify all scripts into `scripts.min.js`. [Install Node.js](http://nodejs.org/), then [install Grunt](http://gruntjs.com/getting-started), and then finally install the dependencies for the theme contained in `package.json`:
 
-```bash
+{% highlight bash %}
 npm install
-```
+{% endhighlight %}
 
 From the theme's root, use `grunt` to concatenate JavaScript files and optimize `.jpg`, `.png` and `.svg` files in the `images/` folder.
 
@@ -215,7 +244,7 @@ You can also use `grunt dev` in combination with `bundle exec jekyll serve` to w
 
 ## Questions?
 
-Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/jekyll-theme-hpstr/issues/new). And if you make something cool with this theme feel free to let me know.
+Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@mmistakes](http://twitter.com/mmistakes) or [file a GitHub Issue](https://github.com/mmistakes/hpstr-jekyll-theme/issues/new). And if you make something cool with this theme feel free to let me know.
 
 ---
 
