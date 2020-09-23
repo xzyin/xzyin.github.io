@@ -1,10 +1,7 @@
 # Menu navigation links
 
-- title: 我的推荐
-  url: /tecbook/
+- title: Theme Setup
+  url: /theme-setup/
 
-- title: 版权声明 
-  url: /about/ 
-
-- title: 小额捐赠
-  url: /about/ali.jpg 
+- title: External Link
+  url: http://mademistakes.com

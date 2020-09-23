@@ -1,26 +1,6 @@
 <meta charset="utf-8">
 <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    TeX: {
-      equationNumbers: {
-        autoNumber: "AMS"
-      }
-    },
-    tex2jax: {
-      inlineMath: [ ['\$','\$'] ],
-      displayMath: [ ['$$','$$'] ],
-      processEscapes: true,
-    }
-  });
-</script>
-
-<script type="text/javascript"
-            src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
 {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 
 {% if site.owner.twitter %}<!-- Twitter Cards -->
@@ -55,7 +35,7 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
 <!-- Webfonts -->
-<link href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
 <meta http-equiv="cleartype" content="on">
 
