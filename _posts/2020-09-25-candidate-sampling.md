@@ -4,6 +4,7 @@ title: Candidate Sampling
 description: "Candidate Sampling在超分类问题计算性能优化的使用"
 modified: 2020-09-25
 tags: [Machine Learning, Tensorflow]
+categories: [算法]
 image:
   path: /images/starry-night-detail.jpg
   feature: starry-night-detail.jpg
