@@ -42,8 +42,6 @@ Long Tail和Hot Top之间的取舍？
 
 
 
-
-
 # 1. 
 <div align="center">
 <image src="/images/algorthim/l1_l2/regular-2.png"/>
