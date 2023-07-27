@@ -25,7 +25,11 @@ image:
 
 在介绍candidate sampling之前我们先了解一下问题的背景。
 
+
+
 ## 1. Softmax 和 Cross Entropy
+
+
 
 在多分类问题中，模型训练的目的是在训练集上学习到一个函数$F(x,y)$，该模型对于测试集和验证集上
 每一个输入$x$，能够准确地预测到对应的类别$y$。
@@ -74,7 +78,6 @@ $$
 \begin{align}
 J = -\sum_{i=1}^{K} y_i \mathrm{ln}(P(y_i|x)) \\
 \end{align}
-
 $$
 
 其中，当$i$对应的类别为正样本时$y_i=1$，当$i$为负样本时$y_i=0$，上述公式简化为:

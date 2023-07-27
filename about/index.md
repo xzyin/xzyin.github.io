@@ -1,32 +1,26 @@
 ---
 layout: page
-title: About the Jekyll Theme
+title: 关于“我”的一些东西
 image:
   feature: abstract-5.jpg
   credit: dargadgetz
-  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+  creditlink:
 comments: false
 modified: 2016-02-01
 ---
 
-They say three times the charm, so here is another free responsive Jekyll blog theme for you. I've learned a ton since open sourcing my first two themes [on Github](http://github.com/mmistakes), and wanted to try a few new things this time around. 
+   
 
-If you've used any of [my other themes](http://mademistakes.com/work/jekyll-themes/) most of this should be familiar territory...
+我是一个追求自由和快乐的斜杠青年。我的主业是一名推荐算法工程，供职于国内最大的互联网公司之一。这里能够给我提供很好的指导和上升空间，给了我一个很好的学习平台。
 
-## HPSTR Features:
+我致力于用最优秀的技术将给每一个物品找到合适的地方；用最热情的分享帮助每一个在困顿中迷茫的人；用最人性化的沟通方式帮助身边每一个人找到适合自己的生活方式。
 
-* Compatible with Jekyll 3 and GitHub Pages.
-* Responsive templates for post, page, and post index `_layouts`. Looks great on mobile, tablet, and desktop devices.
-* Gracefully degrades in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.  
-* Sweet animated menu.
-* Background image support.
-* Support for large images to call out your favorite posts.
-* Optional [Disqus](http://disqus.com) comments.
-* Simple and clear permalink structure[^1].
-* [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) support for a better social sharing experience.
-* [Custom 404 page]({{ site.url }}/404.html) to get you started.
-* [Syntax highlighting]({{ site.url }}/code-highlighting-post/) stylesheets to make your code examples look snazzy.
+我热爱心理学，我认为只有通过了解自身才能够很好的完成人生这趟旅途。我相信每个人都有属于自己独一无二的路和使命。
 
-<div markdown="0"><a href="{{ site.url }}/theme-setup/" class="btn btn-info">Theme Setup</a> <a href="https://github.com/mmistakes/jekyll-theme-hpstr" class="btn btn-success">Download HPSTR</a></div>
+我在成为一名倾听师的道路上。我会成为世界上最优秀的心理咨询师和心理康复师。
 
-[^1]: Example: *domain.com/category-name/post-title*
+我来来自于一个有爱的家庭，那里有着丰盈的爱和关照。我们每个人都爱和包容着彼此；为了彼此和一起的幸福生活而努力。我的母亲非常贤惠，对我有着非常多的关照，对我的童年起到了很大的影响。我的父亲经常鼓励我追寻更加独立的生活。
+
+我热爱分享也乐于探索新的事物，我对亲密关系充满期待；并且热情洋溢地准备好开始一段稳固而充满活力的亲密关系。
+
+我对成功有属于自己的理解: 充足的物质基础，健康的身体状态，轻快的自由的心灵，有爱和相互信任依托的人际关系。这是我一生的努力和追求。
